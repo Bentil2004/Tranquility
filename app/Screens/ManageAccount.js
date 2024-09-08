@@ -22,14 +22,20 @@ const ManageAccount = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Manage Account</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(ChangePassword)}>
-        <Text style={styles.buttonText}>Change Password</Text>
+      <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate(ChangePassword)}>
+        <Icon name="key-outline" size={20} color="#7459AA" style={styles.icon} />
+        <Text style={styles.actionText}>Change Password</Text>
+        <Icon name="chevron-forward-outline" size={20} color="#7459AA" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(DeleteAccount)}>
-        <Text style={styles.buttonText}>Delete Account</Text>
+      <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate(DeleteAccount)}>
+        <Icon name="trash-outline" size={20} color="#7459AA" style={styles.icon} />
+        <Text style={styles.actionText}>Delete Account</Text>
+        <Icon name="chevron-forward-outline" size={20} color="#7459AA" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
-        <Text style={styles.buttonText}>Log out</Text>
+      <TouchableOpacity style={styles.actionButton} onPress={() => setModalVisible(true)}>
+        <Icon name="log-out-outline" size={20} color="#7459AA" style={styles.icon} />
+        <Text style={styles.actionText}>Log out</Text>
+        <Icon name="chevron-forward-outline" size={20} color="#7459AA" />
       </TouchableOpacity>
       <LogoutModal
         visible={modalVisible}
@@ -44,42 +50,42 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 200
+    paddingHorizontal: 20,
+    paddingTop: 100,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingTop: -20,
-    paddingBottom: 50,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ffffff',
-    marginTop: 10,
+    marginBottom: 30,
   },
   backButton: {
-    padding: 10,
+    marginRight: 20,
   },
   headerTitle: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: 'bold',
   },
-  button: {
-    backgroundColor: '#7459AA',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 5,
-    marginVertical: 20,
-    width: '85%',
-    alignSelf: 'center',
+  actionButton: {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 20,
+    paddingHorizontal: 15,
+    backgroundColor: '#fff',
+    borderColor: '#7459AA',
+    borderWidth: 2,
+    borderRadius: 10,
+    marginBottom: 20,
   },
-  buttonText: {
-    color: '#fff',
+  actionText: {
+    flex: 1,
     fontSize: 16,
+    fontWeight: '500',
+    color: '#7459AA',
+    marginLeft: 10,
+  },
+  icon: {
+    marginRight: 10,
   },
 });
 

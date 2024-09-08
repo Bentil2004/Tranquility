@@ -133,7 +133,7 @@ const ChangePassword = () => {
           <View style={styles.modalContent}>
             <Lottie
               style={styles.animation}
-              source={require("../assets/ConfirmationPulse.json")}
+              source={require("../assets/Anime.json")}
               autoPlay
               loop
             />
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   modalButton: {
-    backgroundColor: '#005780',
+    backgroundColor: '#7459AA',
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 5,
