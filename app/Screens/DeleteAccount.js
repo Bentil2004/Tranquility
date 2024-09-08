@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, SafeAreaView } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons'; // Import Ionicons from react-native-vector-icons
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const DeleteAccount = ({ navigation }) => {
   const [reason, setReason] = useState('');
@@ -17,10 +17,8 @@ const DeleteAccount = ({ navigation }) => {
         {
           text: "Delete",
           onPress: () => {
-            // Implement your delete account logic here
-            // For example: deleteAccount(reason);
             Alert.alert("Account deleted", "Your account has been successfully deleted.");
-            navigation.navigate('SignIn'); // Navigate to the sign-in screen after account deletion
+            navigation.navigate('SignIn'); 
           },
           style: "destructive"
         }

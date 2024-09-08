@@ -21,7 +21,7 @@ const FeedbackSuccess = () => {
     <SafeAreaView style={styles.root}>
       <Lottie
         style={styles.animation}
-        source={require("../../assets/ConfirmationPulse.json")}
+        source={require("../../assets/Anime.json")}
         autoPlay
         loop = "false"
       />
